@@ -1,6 +1,6 @@
 export default {
     port: 3000,
-    dbUri: "mongodb+srv://souvik:9ufBNHT8GQRTtFop@cluster0.wej5n.mongodb.net/auth?retryWrites=true&w=majority",
+    dbUri: "mongodb+srv://souvik150:pass1234@cluster0.zdkzoxi.mongodb.net/?retryWrites=true&w=majority",
     logLevel: "info",
     accessTokenPrivateKey: "",
     refreshTokenPrivateKey: "",
