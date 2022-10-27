@@ -96,4 +96,14 @@ export async function resetPasswordHandler(req: Request<ResetPasswordInput["para
     if(!user || !user.passwordResetCode || user.passwordResetCode !== passwordResetCode){
         return res.status(400).send("Could not reset password")
     }
+
+    user.passwordResetCode = null
+    user.password = password
+
+    await user.save();
+    return res.send("Successfully update password")
+}
+
+export async function getCurrentUserHandler(req: Request, res: Response) {
+    return res.send(res.locals.user);
 }
